@@ -1,14 +1,12 @@
 
 
 var activePlayer,winner,isplaying,dom;
-var c00,c01,c02,c10,c11,c12,c20,c21,c22;
-console.log(c00,c01,c02,c10,c11,c12,c20,c21,c22); 
+var c00,c01,c02,c10,c11,c12,c20,c21,c22; 
 
 init();
-
-document.getElementById("btn").addEventListener("click",init);
-
-
+document.getElementById("btn").addEventListener("click", _ => {
+    window.location.reload();
+});
 function init()
 {
 c00=c01=c02=c10=c11=c12=c20=c21=c22=undefined;
@@ -42,7 +40,6 @@ document.querySelector(".c00").addEventListener('click',function() {
     document.querySelector("#img-c00").style.display = "block";
     }
 }
-
 });
 
 document.querySelector(".c01").addEventListener('click',function() {
@@ -217,11 +214,8 @@ function changePlayer()
 
 function endGame()
 {
-    console.log("byyee12");
-    console.log((c00 != undefined) && (c01 != undefined) && (c02 != undefined) && (c10 != undefined) && (c11 != undefined) && (c12 != undefined) && (c20 != undefined) && (c21 != undefined) && (c22 != undefined))
     if((c00 != undefined) && (c01 != undefined) && (c02 != undefined) && (c10 != undefined) && (c11 != undefined) && (c12 != undefined) && (c20 != undefined) && (c21 != undefined) && (c22 != undefined))
     {
-        console.log("byyee1");
         if(isplaying)
         {
         isplaying = false;
